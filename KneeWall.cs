@@ -184,6 +184,8 @@ namespace KneeWall
         /// <summary>
         /// Gets the values from the dialog and sets the default values if needed
         /// </summary>
+        /// commenttest
+        /// comment
         private void GetValuesFromDialog()
         {
             _BeamName = Data.BeamName;
