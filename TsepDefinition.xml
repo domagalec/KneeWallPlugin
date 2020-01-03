@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TEP Version="1.0">
+
+	<Product Id="KneeWall" UpgradeCode="d2ac5f56-52f0-46d8-a816-228493500e38" Version="0.1" Language="1033"
+		Name="Knee Wall Plugin" Manufacturer="KMT"  Description= "Knee Wall Plugin"
+		IconPath="%TEPDEFINITIONFILEFOLDER%\bitmaps\TeklaStructuresExtension.ico">
+		<TeklaVersions>
+			<TeklaVersion Name="2099.1"/>
+			<MinTeklaVersion Name="2016.1"/>
+			<MaxTeklaVersion Name="2099.1"/>
+		</TeklaVersions>
+	</Product>
+	 
+	<SourcePathVariables>
+		<SourcePathVariable Id="TepOutputFolder" Value="%TEPDEFINITIONFILEFOLDER%\output" Comment="This provides the location where the package builder is to save the package."/>
+		<SourcePathVariable Id="BinariesFolder" Value="%TEPDEFINITIONFILEFOLDER%\"/>
+		<SourcePathVariable Id="StandardFileFolder" Value="%TEPDEFINITIONFILEFOLDER%\..\standard file"/>
+		<SourcePathVariable Id="MessagesFolder" Value="%TEPDEFINITIONFILEFOLDER%\..\messages"/>
+		<SourcePathVariable Id="BitmapsFolder" Value="%TEPDEFINITIONFILEFOLDER%\"/>
+    </SourcePathVariables>
+
+	<TargetPathVariables>
+		<PathVariable Id="ModelPluginsDirectory" Value="%ENVDIR%\extensions\plugins\tekla\model\"/>
+		<PathVariable Id="ModelApplicationsDirectory" Value="%ENVDIR%\extensions\applications\tekla\model\"/>
+		<PathVariable Id="ExtensionsDir" Value="%commonEnvFolder%\extensions\"/>
+		<PathVariable Id="BinariesTargetDirectory" Value="%ExtensionsDir%\BoltGroupCreator\"/>
+		<PathVariable Id="BitmapsDirectory" Value="%ENVDIR%\..\bitmaps\"/>
+		<PathVariable Id="AttributeFileDirectory" Value="%commonEnvFolder%\system\"/>
+		<PathVariable Id="CommonMacroDirectory" Value="%commonEnvFolder%\macros\modeling\"/>
+	</TargetPathVariables>
+
+	<Component Id="TheExtensionComponent" Guid="dca04f71-552c-44fc-ac3b-173baadbc155">
+		<File Id="Icon" Source="%BitmapsFolder%\TeklaStructuresExtension.ico" Target="%BitmapsDirectory%"/>
+		<File Id="KneeWallPlugin" Source="%BinariesFolder%\KneeWall.dll" Target="%BinariesTargetDirectory%"/>
+			</Component>
+
+	<Feature Id="TheExtensionFeature" Title="ExtensionFeature">
+		<ComponentRef ReferenceId="TheExtensionComponent" />
+	</Feature>
+
+ </TEP>
