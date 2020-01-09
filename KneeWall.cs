@@ -14,6 +14,7 @@ using Tekla.Structures.Dialog;
 using Tekla.Structures.Dialog.UIControls;
 using Tekla.Structures.Datatype;
 //using Angle = Tekla.Structures.Datatype.Angle;
+//using
 using Distance = Tekla.Structures.Datatype.Distance;
 using String = System.String;
 
