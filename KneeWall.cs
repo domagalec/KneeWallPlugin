@@ -10,6 +10,8 @@ using Tekla.Structures.Geometry3d;
 using Tekla.Structures.Model;
 using Tekla.Structures.Model.UI;
 using Tekla.Structures.Plugins;
+using Tekla.Structures.Dialog;
+using Tekla.Structures.Dialog.UIControls;
 using Tekla.Structures.Datatype;
 //using Angle = Tekla.Structures.Datatype.Angle;
 using Distance = Tekla.Structures.Datatype.Distance;
@@ -249,6 +251,7 @@ namespace KneeWall
                 _Spacing = 610;
             if (IsDefaultValue(_Length))
                 _Length = 2440;
+
         }
 
         private void SetUpRafters(Point StartPoint, Point EndPoint, Point DirectionPoint)
