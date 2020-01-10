@@ -67,6 +67,8 @@ namespace KneeWall
             this.SheatingTypeComboBox = new System.Windows.Forms.ComboBox();
             this.LengthCheckBox = new System.Windows.Forms.CheckBox();
             this.LengthTextBox = new System.Windows.Forms.TextBox();
+            this.DrukregelMovementCheckBox = new System.Windows.Forms.CheckBox();
+            this.DrukregelMovementTextBox = new System.Windows.Forms.TextBox();
             this.okApplyModifyGetOnOffCancel1 = new Tekla.Structures.Dialog.UIControls.OkApplyModifyGetOnOffCancel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -171,19 +173,22 @@ namespace KneeWall
             this.tableLayoutPanel3.Controls.Add(this.SheatingTypeComboBox, 1, 5);
             this.tableLayoutPanel3.Controls.Add(this.LengthCheckBox, 0, 6);
             this.tableLayoutPanel3.Controls.Add(this.LengthTextBox, 1, 6);
+            this.tableLayoutPanel3.Controls.Add(this.DrukregelMovementCheckBox, 0, 7);
+            this.tableLayoutPanel3.Controls.Add(this.DrukregelMovementTextBox, 1, 7);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 5;
+            this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.Size = new System.Drawing.Size(683, 354);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -359,6 +364,34 @@ namespace KneeWall
             this.LengthTextBox.TabIndex = 1;
             this.LengthTextBox.Text = "2440";
             // 
+            // DrukregelMovementCheckBox
+            // 
+            this.structuresExtender.SetAttributeName(this.DrukregelMovementCheckBox, "DrukregelMovement");
+            this.structuresExtender.SetAttributeTypeName(this.DrukregelMovementCheckBox, null);
+            this.DrukregelMovementCheckBox.AutoSize = true;
+            this.structuresExtender.SetBindPropertyName(this.DrukregelMovementCheckBox, null);
+            this.structuresExtender.SetIsFilter(this.DrukregelMovementCheckBox, true);
+            this.DrukregelMovementCheckBox.Location = new System.Drawing.Point(4, 183);
+            this.DrukregelMovementCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DrukregelMovementCheckBox.Name = "DrukregelMovementCheckBox";
+            this.DrukregelMovementCheckBox.Size = new System.Drawing.Size(123, 21);
+            this.DrukregelMovementCheckBox.TabIndex = 0;
+            this.DrukregelMovementCheckBox.Text = "DR movement:";
+            this.DrukregelMovementCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // DrukregelMovementTextBox
+            // 
+            this.structuresExtender.SetAttributeName(this.DrukregelMovementTextBox, "DrukregelMovement");
+            this.structuresExtender.SetAttributeTypeName(this.DrukregelMovementTextBox, "Distance");
+            this.structuresExtender.SetBindPropertyName(this.DrukregelMovementTextBox, null);
+            this.DrukregelMovementTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DrukregelMovementTextBox.Location = new System.Drawing.Point(151, 183);
+            this.DrukregelMovementTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DrukregelMovementTextBox.Name = "DrukregelMovementTextBox";
+            this.DrukregelMovementTextBox.Size = new System.Drawing.Size(528, 22);
+            this.DrukregelMovementTextBox.TabIndex = 5;
+            this.DrukregelMovementTextBox.Text = "0.0";
+            // 
             // okApplyModifyGetOnOffCancel1
             // 
             this.structuresExtender.SetAttributeName(this.okApplyModifyGetOnOffCancel1, null);
@@ -523,6 +556,8 @@ namespace KneeWall
         private System.Windows.Forms.TextBox BeamProfileTextBox;
         private System.Windows.Forms.TextBox DrukregelProfileTextBox;
         private System.Windows.Forms.CheckBox DrukregelProfileCheckBox;
+        private System.Windows.Forms.CheckBox DrukregelMovementCheckBox;
+        private System.Windows.Forms.TextBox DrukregelMovementTextBox;
         //private System.Windows.Forms.TextBox BeamMaterialTextBox;
         //private System.Windows.Forms.TextBox BeamFinishTextBox;
         //private System.Windows.Forms.TextBox BeamClassTextBox;
@@ -545,6 +580,8 @@ namespace KneeWall
         private System.Windows.Forms.CheckBox SheatingTypeCheckBox;
         private System.Windows.Forms.CheckBox LengthCheckBox;
         private System.Windows.Forms.TextBox LengthTextBox;
+
+
 
     }
 }

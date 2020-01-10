@@ -76,6 +76,9 @@ namespace KneeWall
         [StructuresField("DrukregelAngle")]
         public double DrukregelAngle;
 
+        [StructuresField("DrukregelMovement")]
+        public double DrukregelMovement;
+
         [StructuresField("SheatingType")]
         public int SheatingType;
 
@@ -111,6 +114,7 @@ namespace KneeWall
         private string _DrukregelFinish = string.Empty;
         private string _DrukregelClass = "2";
         private double _DrukregelAngle;
+        private double _DrukregelMovement;
 
         private double _Length;
 
@@ -211,6 +215,7 @@ namespace KneeWall
             _DrukregelFinish = Data.DrukregelFinish;
             _DrukregelClass = Data.DrukregelClass;
             _DrukregelAngle = Data.DrukregelAngle;
+            _DrukregelMovement = Data.DrukregelMovement;
 
             _Length = Data.Length;
 
@@ -247,6 +252,8 @@ namespace KneeWall
                 _DrukregelAngle = 45;
             if (IsDefaultValue(_SheatingType))
                 _SheatingType = 0;
+            if (IsDefaultValue(_DrukregelMovement))
+                _DrukregelMovement = 0.0;
 
             if (IsDefaultValue(_Spacing))
                 _Spacing = 610;
@@ -425,8 +432,8 @@ namespace KneeWall
 
                 Drukregel.Position.RotationOffset = -90 + _DrukregelAngle;
 
-                Drukregel.StartPoint = new Point(MinimumX, MinimumY, MaximumZ);
-                Drukregel.EndPoint = new Point(MinimumX + _Length, MinimumY, MaximumZ);
+                Drukregel.StartPoint = new Point(MinimumX, MinimumY - _DrukregelMovement*Math.Cos((90-_DrukregelAngle)*Math.PI/180), MaximumZ + _DrukregelMovement * Math.Sin((90 - _DrukregelAngle) * Math.PI / 180));
+                Drukregel.EndPoint = new Point(MinimumX + _Length, MinimumY - _DrukregelMovement * Math.Cos((90 - _DrukregelAngle) * Math.PI / 180), MaximumZ + _DrukregelMovement * Math.Sin((90 - _DrukregelAngle) * Math.PI / 180));
 
                 if (!Drukregel.Insert())
                     MessageBox.Show("Failed to insert drukregel");
@@ -451,6 +458,14 @@ namespace KneeWall
                 {
                     Rafters[i].SetUserProperty("comment", "");
                 }
+
+                CutPlane DrukregelCut1 = new CutPlane();
+                DrukregelCut1.Plane = new Plane();
+                DrukregelCut1.Plane.Origin = new Point(MinimumX, MinimumY, MaximumZ);
+                DrukregelCut1.Plane.AxisX = new Vector(MaximumX - MinimumX, 0, 0);
+                DrukregelCut1.Plane.AxisY = new Vector(0, 0, 95);
+                DrukregelCut1.Father = Drukregel;
+                DrukregelCut1.Insert();
 
 
             }
