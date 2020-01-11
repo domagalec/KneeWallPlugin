@@ -461,11 +461,19 @@ namespace KneeWall
 
                 CutPlane DrukregelCut1 = new CutPlane();
                 DrukregelCut1.Plane = new Plane();
-                DrukregelCut1.Plane.Origin = new Point(MinimumX, MinimumY, MaximumZ);
-                DrukregelCut1.Plane.AxisX = new Vector(MaximumX - MinimumX, 0, 0);
-                DrukregelCut1.Plane.AxisY = new Vector(0, 0, 95);
+                DrukregelCut1.Plane.Origin = new Point(MinimumX, MaximumY, MaximumZ);
+                DrukregelCut1.Plane.AxisX = new Vector(0, 0, 1);
+                DrukregelCut1.Plane.AxisY = new Vector(1, 0, 0);
                 DrukregelCut1.Father = Drukregel;
                 DrukregelCut1.Insert();
+
+                CutPlane DrukregelCut3 = new CutPlane();
+                DrukregelCut3.Plane = new Plane();
+                DrukregelCut3.Plane.Origin = new Point(MinimumX, MinimumY, MaximumZ);
+                DrukregelCut3.Plane.AxisX = new Vector(0, 1, 0);
+                DrukregelCut3.Plane.AxisY = new Vector(1, 0, 0);
+                DrukregelCut3.Father = Drukregel;
+                DrukregelCut3.Insert();
 
 
             }
@@ -591,8 +599,8 @@ namespace KneeWall
 
                 Drukregel.Position.RotationOffset = -90 + _DrukregelAngle;
 
-                Drukregel.StartPoint = new Point(MaximumX, MaximumY, MaximumZ);
-                Drukregel.EndPoint = new Point(MaximumX - _Length, MaximumY, MaximumZ);
+                Drukregel.StartPoint = new Point(MaximumX, MaximumY + _DrukregelMovement * Math.Cos((90 - _DrukregelAngle) * Math.PI / 180), MaximumZ + _DrukregelMovement * Math.Sin((90 - _DrukregelAngle) * Math.PI / 180));
+                Drukregel.EndPoint = new Point(MaximumX - _Length, MaximumY + _DrukregelMovement * Math.Cos((90 - _DrukregelAngle) * Math.PI / 180), MaximumZ + _DrukregelMovement * Math.Sin((90 - _DrukregelAngle) * Math.PI / 180));
 
                 if (!Drukregel.Insert())
                     MessageBox.Show("Failed to insert drukregel");
@@ -618,7 +626,21 @@ namespace KneeWall
                     Rafters[i].SetUserProperty("comment", "");
                 }
 
+                CutPlane DrukregelCut1 = new CutPlane();
+                DrukregelCut1.Plane = new Plane();
+                DrukregelCut1.Plane.Origin = new Point(MinimumX, MinimumY, MaximumZ);
+                DrukregelCut1.Plane.AxisX = new Vector(1, 0, 0);
+                DrukregelCut1.Plane.AxisY = new Vector(0, 0, 1);
+                DrukregelCut1.Father = Drukregel;
+                DrukregelCut1.Insert();
 
+                CutPlane DrukregelCut3 = new CutPlane();
+                DrukregelCut3.Plane = new Plane();
+                DrukregelCut3.Plane.Origin = new Point(MinimumX, MinimumY, MaximumZ);
+                DrukregelCut3.Plane.AxisX = new Vector(0, 1, 0);
+                DrukregelCut3.Plane.AxisY = new Vector(1, 0, 0);
+                DrukregelCut3.Father = Drukregel;
+                DrukregelCut3.Insert();
             }
 
             else if (DirectionPoint.X > StartPoint.X)
@@ -742,8 +764,8 @@ namespace KneeWall
 
                 Drukregel.Position.RotationOffset = -90 + _DrukregelAngle;
 
-                Drukregel.StartPoint = new Point(MinimumX, MaximumY, MaximumZ);
-                Drukregel.EndPoint = new Point(MinimumX, MaximumY - _Length, MaximumZ);
+                Drukregel.StartPoint = new Point(MinimumX - _DrukregelMovement * Math.Cos((90 - _DrukregelAngle) * Math.PI / 180), MaximumY, MaximumZ + _DrukregelMovement * Math.Sin((90 - _DrukregelAngle) * Math.PI / 180));
+                Drukregel.EndPoint = new Point(MinimumX - _DrukregelMovement * Math.Cos((90 - _DrukregelAngle) * Math.PI / 180), MaximumY - _Length, MaximumZ + _DrukregelMovement * Math.Sin((90 - _DrukregelAngle) * Math.PI / 180));
 
                 if (!Drukregel.Insert())
                     MessageBox.Show("Failed to insert drukregel");
@@ -769,7 +791,21 @@ namespace KneeWall
                     Rafters[i].SetUserProperty("comment", "");
                 }
 
+                CutPlane DrukregelCut1 = new CutPlane();
+                DrukregelCut1.Plane = new Plane();
+                DrukregelCut1.Plane.Origin = new Point(MaximumX, MaximumY, MaximumZ);
+                DrukregelCut1.Plane.AxisX = new Vector(0, 1, 0);
+                DrukregelCut1.Plane.AxisY = new Vector(0, 0, 1);
+                DrukregelCut1.Father = Drukregel;
+                DrukregelCut1.Insert();
 
+                CutPlane DrukregelCut3 = new CutPlane();
+                DrukregelCut3.Plane = new Plane();
+                DrukregelCut3.Plane.Origin = new Point(MinimumX, MinimumY, MaximumZ);
+                DrukregelCut3.Plane.AxisX = new Vector(0, 1, 0);
+                DrukregelCut3.Plane.AxisY = new Vector(1, 0, 0);
+                DrukregelCut3.Father = Drukregel;
+                DrukregelCut3.Insert();
             }
 
             else if (DirectionPoint.X < StartPoint.X)
@@ -893,8 +929,8 @@ namespace KneeWall
 
                 Drukregel.Position.RotationOffset = -90 + _DrukregelAngle;
 
-                Drukregel.StartPoint = new Point(MaximumX, MinimumY, MaximumZ);
-                Drukregel.EndPoint = new Point(MaximumX, MinimumY + _Length, MaximumZ);
+                Drukregel.StartPoint = new Point(MaximumX + _DrukregelMovement * Math.Cos((90 - _DrukregelAngle) * Math.PI / 180), MinimumY, MaximumZ + _DrukregelMovement * Math.Sin((90 - _DrukregelAngle) * Math.PI / 180));
+                Drukregel.EndPoint = new Point(MaximumX + _DrukregelMovement * Math.Cos((90 - _DrukregelAngle) * Math.PI / 180), MinimumY + _Length, MaximumZ + _DrukregelMovement * Math.Sin((90 - _DrukregelAngle) * Math.PI / 180));
 
                 if (!Drukregel.Insert())
                     MessageBox.Show("Failed to insert drukregel");
@@ -920,6 +956,21 @@ namespace KneeWall
                     Rafters[i].SetUserProperty("comment", "");
                 }
 
+                CutPlane DrukregelCut1 = new CutPlane();
+                DrukregelCut1.Plane = new Plane();
+                DrukregelCut1.Plane.Origin = new Point(MinimumX, MaximumY, MaximumZ);
+                DrukregelCut1.Plane.AxisX = new Vector(0, 0, 1);
+                DrukregelCut1.Plane.AxisY = new Vector(0, 1, 0);
+                DrukregelCut1.Father = Drukregel;
+                DrukregelCut1.Insert();
+
+                CutPlane DrukregelCut3 = new CutPlane();
+                DrukregelCut3.Plane = new Plane();
+                DrukregelCut3.Plane.Origin = new Point(MinimumX, MinimumY, MaximumZ);
+                DrukregelCut3.Plane.AxisX = new Vector(0, 1, 0);
+                DrukregelCut3.Plane.AxisY = new Vector(1, 0, 0);
+                DrukregelCut3.Father = Drukregel;
+                DrukregelCut3.Insert();
 
             }
 
