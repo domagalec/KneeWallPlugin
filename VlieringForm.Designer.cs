@@ -7,9 +7,9 @@ using System.Drawing;
 using System.Text;
 using Tekla.Structures.Datatype;
 
-namespace KneeWall
+namespace Vliering
 {
-    partial class KneeWallForm : PluginFormBase
+    partial class VlieringForm : PluginFormBase
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@ namespace KneeWall
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KneeWallForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VlieringForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.saveLoad1 = new Tekla.Structures.Dialog.UIControls.SaveLoad();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -452,7 +452,7 @@ namespace KneeWall
             this.tabPage4.Size = new System.Drawing.Size(200, 100);
             this.tabPage4.TabIndex = 0;
             // 
-            // KneeWallForm
+            // VlieringForm
             // 
             this.structuresExtender.SetAttributeName(this, null);
             this.structuresExtender.SetAttributeTypeName(this, null);
@@ -463,8 +463,8 @@ namespace KneeWall
             this.ClientSize = new System.Drawing.Size(697, 505);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "KneeWallForm";
-            this.Text = "KneeWallForm";
+            this.Name = "VlieringForm";
+            this.Text = "VlieringForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.PropertiesTabPage1.ResumeLayout(false);

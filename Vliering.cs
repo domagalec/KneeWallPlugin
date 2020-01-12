@@ -18,7 +18,7 @@ using Tekla.Structures.Datatype;
 using Distance = Tekla.Structures.Datatype.Distance;
 using String = System.String;
 
-namespace KneeWall
+namespace Vliering
 {
     public class StructuresData
     {
@@ -86,9 +86,9 @@ namespace KneeWall
         public double Length;
     }
 
-    [Plugin("KneeWall")]
-    [PluginUserInterface("KneeWall.KneeWallForm")]
-    public class KneeWall : PluginBase
+    [Plugin("Vliering")]
+    [PluginUserInterface("Vliering.VlieringForm")]
+    public class Vliering : PluginBase
     {
         #region Fields
         private Model _Model;
@@ -142,7 +142,7 @@ namespace KneeWall
         #endregion
 
         #region Constructor
-        public KneeWall(StructuresData StructuresData)
+        public Vliering(StructuresData StructuresData)
         {
             Model = new Model();
             Data = StructuresData;

@@ -4,11 +4,11 @@ using System.Globalization;
 using Tekla.Structures.Datatype;
 using Tekla.Structures.Dialog;
 
-namespace KneeWall
+namespace Vliering
 {
-    public partial class KneeWallForm : PluginFormBase
+    public partial class VlieringForm : PluginFormBase
     {
-        public KneeWallForm()
+        public VlieringForm()
         {
             InitializeComponent();
         }

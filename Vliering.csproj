@@ -9,8 +9,8 @@
     <ProjectGuid>{F06F233A-8C53-477F-972F-BAFE58885B86}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KneeWall</RootNamespace>
-    <AssemblyName>KneeWall</AssemblyName>
+    <RootNamespace>Vliering</RootNamespace>
+    <AssemblyName>Vliering</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -98,12 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KneeWall.cs" />
-    <Compile Include="KneeWallForm.cs">
+    <Compile Include="Vliering.cs" />
+    <Compile Include="VlieringForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KneeWallForm.Designer.cs">
-      <DependentUpon>KneeWallForm.cs</DependentUpon>
+    <Compile Include="VlieringForm.Designer.cs">
+      <DependentUpon>VlieringForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -113,9 +113,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="KneeWallForm.resx">
+    <EmbeddedResource Include="VlieringForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>KneeWallForm.cs</DependentUpon>
+      <DependentUpon>VlieringForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
