@@ -189,7 +189,6 @@ namespace KneeWall
             this.BeamProfileTextBox.Size = new System.Drawing.Size(100, 22);
             this.BeamProfileTextBox.TabIndex = 5;
             this.BeamProfileTextBox.Text = "45*70";
-            this.BeamProfileTextBox.TextChanged += new System.EventHandler(this.BeamProfileTextBox_TextChanged);
             // 
             // SheatingOverhangCheckBox
             // 
