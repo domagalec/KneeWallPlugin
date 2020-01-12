@@ -44,6 +44,7 @@ namespace KneeWall
             this.ToggleSelection();
         }
 
+
         // When profile catalog control is clicked the value on the text box is 
         // selected in the Profile selection form, if exists in the catalog
         /*private void profileCatalog1_SelectClicked(object sender, EventArgs e)

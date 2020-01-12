@@ -50,11 +50,11 @@ namespace KneeWall
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KneeWallForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.saveLoad1 = new Tekla.Structures.Dialog.UIControls.SaveLoad();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PropertiesTabPage1 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.BeamProfileCheckBox1 = new System.Windows.Forms.CheckBox();
             this.BeamProfileTextBox = new System.Windows.Forms.TextBox();
             this.SheatingOverhangCheckBox = new System.Windows.Forms.CheckBox();
@@ -63,13 +63,14 @@ namespace KneeWall
             this.DrukregelAngleTextBox = new System.Windows.Forms.TextBox();
             this.DrukregelProfileCheckBox = new System.Windows.Forms.CheckBox();
             this.DrukregelProfileTextBox = new System.Windows.Forms.TextBox();
-            this.SheatingTypeCheckBox = new System.Windows.Forms.CheckBox();
-            this.SheatingTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.LengthCheckBox = new System.Windows.Forms.CheckBox();
-            this.LengthTextBox = new System.Windows.Forms.TextBox();
             this.DrukregelMovementCheckBox = new System.Windows.Forms.CheckBox();
             this.DrukregelMovementTextBox = new System.Windows.Forms.TextBox();
+            this.SheatingTypeCheckBox = new System.Windows.Forms.CheckBox();
+            this.SheatingTypeComboBox = new System.Windows.Forms.ComboBox();
             this.okApplyModifyGetOnOffCancel1 = new Tekla.Structures.Dialog.UIControls.OkApplyModifyGetOnOffCancel();
+            this.LengthCheckBox = new System.Windows.Forms.CheckBox();
+            this.LengthTextBox = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.saveLoad2 = new Tekla.Structures.Dialog.UIControls.SaveLoad();
@@ -79,9 +80,6 @@ namespace KneeWall
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.PropertiesTabPage1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tabControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -102,7 +100,7 @@ namespace KneeWall
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(707, 505);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(697, 505);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // saveLoad1
@@ -119,7 +117,7 @@ namespace KneeWall
             this.saveLoad1.Margin = new System.Windows.Forms.Padding(5);
             this.saveLoad1.Name = "saveLoad1";
             this.saveLoad1.SaveAsText = "";
-            this.saveLoad1.Size = new System.Drawing.Size(697, 53);
+            this.saveLoad1.Size = new System.Drawing.Size(687, 53);
             this.saveLoad1.TabIndex = 0;
             this.saveLoad1.UserDefinedHelpFilePath = null;
             // 
@@ -134,63 +132,36 @@ namespace KneeWall
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(699, 391);
+            this.tabControl1.Size = new System.Drawing.Size(689, 391);
             this.tabControl1.TabIndex = 2;
             // 
             // PropertiesTabPage1
             // 
             this.structuresExtender.SetAttributeName(this.PropertiesTabPage1, null);
             this.structuresExtender.SetAttributeTypeName(this.PropertiesTabPage1, null);
+            this.PropertiesTabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PropertiesTabPage1.BackgroundImage")));
+            this.PropertiesTabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.structuresExtender.SetBindPropertyName(this.PropertiesTabPage1, null);
-            this.PropertiesTabPage1.Controls.Add(this.tableLayoutPanel3);
+            this.PropertiesTabPage1.Controls.Add(this.BeamProfileCheckBox1);
+            this.PropertiesTabPage1.Controls.Add(this.BeamProfileTextBox);
+            this.PropertiesTabPage1.Controls.Add(this.SheatingOverhangCheckBox);
+            this.PropertiesTabPage1.Controls.Add(this.SheatingOverhangTextBox);
+            this.PropertiesTabPage1.Controls.Add(this.DrukregelAngleCheckBox);
+            this.PropertiesTabPage1.Controls.Add(this.DrukregelAngleTextBox);
+            this.PropertiesTabPage1.Controls.Add(this.DrukregelProfileCheckBox);
+            this.PropertiesTabPage1.Controls.Add(this.DrukregelProfileTextBox);
+            this.PropertiesTabPage1.Controls.Add(this.DrukregelMovementCheckBox);
+            this.PropertiesTabPage1.Controls.Add(this.DrukregelMovementTextBox);
+            this.PropertiesTabPage1.Controls.Add(this.SheatingTypeCheckBox);
+            this.PropertiesTabPage1.Controls.Add(this.SheatingTypeComboBox);
             this.PropertiesTabPage1.Location = new System.Drawing.Point(4, 25);
             this.PropertiesTabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.PropertiesTabPage1.Name = "PropertiesTabPage1";
             this.PropertiesTabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.PropertiesTabPage1.Size = new System.Drawing.Size(691, 362);
+            this.PropertiesTabPage1.Size = new System.Drawing.Size(681, 362);
             this.PropertiesTabPage1.TabIndex = 0;
             this.PropertiesTabPage1.Text = "Properties";
             this.PropertiesTabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.structuresExtender.SetAttributeName(this.tableLayoutPanel3, null);
-            this.structuresExtender.SetAttributeTypeName(this.tableLayoutPanel3, null);
-            this.structuresExtender.SetBindPropertyName(this.tableLayoutPanel3, null);
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.BeamProfileCheckBox1, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.BeamProfileTextBox, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.SheatingOverhangCheckBox, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.SheatingOverhangTextBox, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.DrukregelAngleCheckBox, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.DrukregelAngleTextBox, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.DrukregelProfileCheckBox, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.DrukregelProfileTextBox, 1, 4);
-            this.tableLayoutPanel3.Controls.Add(this.SheatingTypeCheckBox, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.SheatingTypeComboBox, 1, 5);
-            this.tableLayoutPanel3.Controls.Add(this.LengthCheckBox, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.LengthTextBox, 1, 6);
-            this.tableLayoutPanel3.Controls.Add(this.DrukregelMovementCheckBox, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.DrukregelMovementTextBox, 1, 7);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(683, 354);
-            this.tableLayoutPanel3.TabIndex = 0;
             // 
             // BeamProfileCheckBox1
             // 
@@ -199,12 +170,12 @@ namespace KneeWall
             this.BeamProfileCheckBox1.AutoSize = true;
             this.structuresExtender.SetBindPropertyName(this.BeamProfileCheckBox1, null);
             this.structuresExtender.SetIsFilter(this.BeamProfileCheckBox1, true);
-            this.BeamProfileCheckBox1.Location = new System.Drawing.Point(4, 4);
+            this.BeamProfileCheckBox1.Location = new System.Drawing.Point(387, 32);
             this.BeamProfileCheckBox1.Margin = new System.Windows.Forms.Padding(4);
             this.BeamProfileCheckBox1.Name = "BeamProfileCheckBox1";
-            this.BeamProfileCheckBox1.Size = new System.Drawing.Size(74, 21);
+            this.BeamProfileCheckBox1.Size = new System.Drawing.Size(137, 21);
             this.BeamProfileCheckBox1.TabIndex = 2;
-            this.BeamProfileCheckBox1.Text = "Profile:";
+            this.BeamProfileCheckBox1.Text = "Knee wall profile:";
             this.BeamProfileCheckBox1.UseVisualStyleBackColor = true;
             // 
             // BeamProfileTextBox
@@ -212,13 +183,13 @@ namespace KneeWall
             this.structuresExtender.SetAttributeName(this.BeamProfileTextBox, "BeamProfile");
             this.structuresExtender.SetAttributeTypeName(this.BeamProfileTextBox, "String");
             this.structuresExtender.SetBindPropertyName(this.BeamProfileTextBox, null);
-            this.BeamProfileTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BeamProfileTextBox.Location = new System.Drawing.Point(151, 4);
+            this.BeamProfileTextBox.Location = new System.Drawing.Point(532, 30);
             this.BeamProfileTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.BeamProfileTextBox.Name = "BeamProfileTextBox";
-            this.BeamProfileTextBox.Size = new System.Drawing.Size(528, 22);
-            this.BeamProfileTextBox.TabIndex = 7;
+            this.BeamProfileTextBox.Size = new System.Drawing.Size(100, 22);
+            this.BeamProfileTextBox.TabIndex = 5;
             this.BeamProfileTextBox.Text = "45*70";
+            this.BeamProfileTextBox.TextChanged += new System.EventHandler(this.BeamProfileTextBox_TextChanged);
             // 
             // SheatingOverhangCheckBox
             // 
@@ -227,12 +198,11 @@ namespace KneeWall
             this.SheatingOverhangCheckBox.AutoSize = true;
             this.structuresExtender.SetBindPropertyName(this.SheatingOverhangCheckBox, null);
             this.structuresExtender.SetIsFilter(this.SheatingOverhangCheckBox, true);
-            this.SheatingOverhangCheckBox.Location = new System.Drawing.Point(4, 34);
+            this.SheatingOverhangCheckBox.Location = new System.Drawing.Point(149, 100);
             this.SheatingOverhangCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.SheatingOverhangCheckBox.Name = "SheatingOverhangCheckBox";
-            this.SheatingOverhangCheckBox.Size = new System.Drawing.Size(97, 21);
+            this.SheatingOverhangCheckBox.Size = new System.Drawing.Size(18, 17);
             this.SheatingOverhangCheckBox.TabIndex = 0;
-            this.SheatingOverhangCheckBox.Text = "Overhang:";
             this.SheatingOverhangCheckBox.UseVisualStyleBackColor = true;
             // 
             // SheatingOverhangTextBox
@@ -240,12 +210,11 @@ namespace KneeWall
             this.structuresExtender.SetAttributeName(this.SheatingOverhangTextBox, "SheatingOverhang");
             this.structuresExtender.SetAttributeTypeName(this.SheatingOverhangTextBox, "Distance");
             this.structuresExtender.SetBindPropertyName(this.SheatingOverhangTextBox, null);
-            this.SheatingOverhangTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SheatingOverhangTextBox.Location = new System.Drawing.Point(151, 34);
+            this.SheatingOverhangTextBox.Location = new System.Drawing.Point(175, 96);
             this.SheatingOverhangTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.SheatingOverhangTextBox.Name = "SheatingOverhangTextBox";
-            this.SheatingOverhangTextBox.Size = new System.Drawing.Size(528, 22);
-            this.SheatingOverhangTextBox.TabIndex = 5;
+            this.SheatingOverhangTextBox.Size = new System.Drawing.Size(48, 22);
+            this.SheatingOverhangTextBox.TabIndex = 1;
             this.SheatingOverhangTextBox.Text = "0.0";
             // 
             // DrukregelAngleCheckBox
@@ -255,12 +224,11 @@ namespace KneeWall
             this.DrukregelAngleCheckBox.AutoSize = true;
             this.structuresExtender.SetBindPropertyName(this.DrukregelAngleCheckBox, null);
             this.structuresExtender.SetIsFilter(this.DrukregelAngleCheckBox, true);
-            this.DrukregelAngleCheckBox.Location = new System.Drawing.Point(4, 64);
+            this.DrukregelAngleCheckBox.Location = new System.Drawing.Point(465, 166);
             this.DrukregelAngleCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrukregelAngleCheckBox.Name = "DrukregelAngleCheckBox";
-            this.DrukregelAngleCheckBox.Size = new System.Drawing.Size(135, 21);
+            this.DrukregelAngleCheckBox.Size = new System.Drawing.Size(18, 17);
             this.DrukregelAngleCheckBox.TabIndex = 0;
-            this.DrukregelAngleCheckBox.Text = "Drukregel angle:";
             this.DrukregelAngleCheckBox.UseVisualStyleBackColor = true;
             // 
             // DrukregelAngleTextBox
@@ -268,12 +236,11 @@ namespace KneeWall
             this.structuresExtender.SetAttributeName(this.DrukregelAngleTextBox, "DrukregelAngle");
             this.structuresExtender.SetAttributeTypeName(this.DrukregelAngleTextBox, "Double");
             this.structuresExtender.SetBindPropertyName(this.DrukregelAngleTextBox, null);
-            this.DrukregelAngleTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DrukregelAngleTextBox.Location = new System.Drawing.Point(151, 64);
+            this.DrukregelAngleTextBox.Location = new System.Drawing.Point(491, 162);
             this.DrukregelAngleTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrukregelAngleTextBox.Name = "DrukregelAngleTextBox";
-            this.DrukregelAngleTextBox.Size = new System.Drawing.Size(528, 22);
-            this.DrukregelAngleTextBox.TabIndex = 1;
+            this.DrukregelAngleTextBox.Size = new System.Drawing.Size(48, 22);
+            this.DrukregelAngleTextBox.TabIndex = 2;
             this.DrukregelAngleTextBox.Text = "45.00";
             // 
             // DrukregelProfileCheckBox
@@ -283,7 +250,7 @@ namespace KneeWall
             this.DrukregelProfileCheckBox.AutoSize = true;
             this.structuresExtender.SetBindPropertyName(this.DrukregelProfileCheckBox, null);
             this.structuresExtender.SetIsFilter(this.DrukregelProfileCheckBox, true);
-            this.DrukregelProfileCheckBox.Location = new System.Drawing.Point(4, 94);
+            this.DrukregelProfileCheckBox.Location = new System.Drawing.Point(387, 61);
             this.DrukregelProfileCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrukregelProfileCheckBox.Name = "DrukregelProfileCheckBox";
             this.DrukregelProfileCheckBox.Size = new System.Drawing.Size(139, 21);
@@ -296,73 +263,12 @@ namespace KneeWall
             this.structuresExtender.SetAttributeName(this.DrukregelProfileTextBox, "DrukregelProfile");
             this.structuresExtender.SetAttributeTypeName(this.DrukregelProfileTextBox, "String");
             this.structuresExtender.SetBindPropertyName(this.DrukregelProfileTextBox, null);
-            this.DrukregelProfileTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DrukregelProfileTextBox.Location = new System.Drawing.Point(151, 94);
+            this.DrukregelProfileTextBox.Location = new System.Drawing.Point(532, 59);
             this.DrukregelProfileTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrukregelProfileTextBox.Name = "DrukregelProfileTextBox";
-            this.DrukregelProfileTextBox.Size = new System.Drawing.Size(528, 22);
+            this.DrukregelProfileTextBox.Size = new System.Drawing.Size(48, 22);
             this.DrukregelProfileTextBox.TabIndex = 7;
             this.DrukregelProfileTextBox.Text = "DR";
-            // 
-            // SheatingTypeCheckBox
-            // 
-            this.structuresExtender.SetAttributeName(this.SheatingTypeCheckBox, "SheatingType");
-            this.structuresExtender.SetAttributeTypeName(this.SheatingTypeCheckBox, null);
-            this.SheatingTypeCheckBox.AutoSize = true;
-            this.structuresExtender.SetBindPropertyName(this.SheatingTypeCheckBox, null);
-            this.structuresExtender.SetIsFilter(this.SheatingTypeCheckBox, true);
-            this.SheatingTypeCheckBox.Location = new System.Drawing.Point(4, 124);
-            this.SheatingTypeCheckBox.Margin = new System.Windows.Forms.Padding(4);
-            this.SheatingTypeCheckBox.Name = "SheatingTypeCheckBox";
-            this.SheatingTypeCheckBox.Size = new System.Drawing.Size(117, 21);
-            this.SheatingTypeCheckBox.TabIndex = 8;
-            this.SheatingTypeCheckBox.Text = "Sheating type";
-            this.SheatingTypeCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // SheatingTypeComboBox
-            // 
-            this.structuresExtender.SetAttributeName(this.SheatingTypeComboBox, "SheatingType");
-            this.structuresExtender.SetAttributeTypeName(this.SheatingTypeComboBox, "Integer");
-            this.structuresExtender.SetBindPropertyName(this.SheatingTypeComboBox, "SelectedIndex");
-            this.SheatingTypeComboBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.SheatingTypeComboBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SheatingTypeComboBox.Items.AddRange(new object[] {
-            "Naturel",
-            "Wit Spanolak"});
-            this.SheatingTypeComboBox.Location = new System.Drawing.Point(150, 122);
-            this.SheatingTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SheatingTypeComboBox.Name = "SheatingTypeComboBox";
-            this.SheatingTypeComboBox.Size = new System.Drawing.Size(151, 24);
-            this.SheatingTypeComboBox.TabIndex = 9;
-            this.SheatingTypeComboBox.Text = "Naturel";
-            // 
-            // LengthCheckBox
-            // 
-            this.structuresExtender.SetAttributeName(this.LengthCheckBox, "Length");
-            this.structuresExtender.SetAttributeTypeName(this.LengthCheckBox, null);
-            this.LengthCheckBox.AutoSize = true;
-            this.structuresExtender.SetBindPropertyName(this.LengthCheckBox, null);
-            this.structuresExtender.SetIsFilter(this.LengthCheckBox, true);
-            this.LengthCheckBox.Location = new System.Drawing.Point(4, 153);
-            this.LengthCheckBox.Margin = new System.Windows.Forms.Padding(4);
-            this.LengthCheckBox.Name = "LengthCheckBox";
-            this.LengthCheckBox.Size = new System.Drawing.Size(137, 21);
-            this.LengthCheckBox.TabIndex = 0;
-            this.LengthCheckBox.Text = "Knee wall length:";
-            this.LengthCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // LengthTextBox
-            // 
-            this.structuresExtender.SetAttributeName(this.LengthTextBox, "Length");
-            this.structuresExtender.SetAttributeTypeName(this.LengthTextBox, "Distance");
-            this.structuresExtender.SetBindPropertyName(this.LengthTextBox, null);
-            this.LengthTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LengthTextBox.Location = new System.Drawing.Point(151, 153);
-            this.LengthTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.LengthTextBox.Name = "LengthTextBox";
-            this.LengthTextBox.Size = new System.Drawing.Size(528, 22);
-            this.LengthTextBox.TabIndex = 1;
-            this.LengthTextBox.Text = "2440";
             // 
             // DrukregelMovementCheckBox
             // 
@@ -371,12 +277,11 @@ namespace KneeWall
             this.DrukregelMovementCheckBox.AutoSize = true;
             this.structuresExtender.SetBindPropertyName(this.DrukregelMovementCheckBox, null);
             this.structuresExtender.SetIsFilter(this.DrukregelMovementCheckBox, true);
-            this.DrukregelMovementCheckBox.Location = new System.Drawing.Point(4, 183);
+            this.DrukregelMovementCheckBox.Location = new System.Drawing.Point(387, 212);
             this.DrukregelMovementCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrukregelMovementCheckBox.Name = "DrukregelMovementCheckBox";
-            this.DrukregelMovementCheckBox.Size = new System.Drawing.Size(123, 21);
+            this.DrukregelMovementCheckBox.Size = new System.Drawing.Size(18, 17);
             this.DrukregelMovementCheckBox.TabIndex = 0;
-            this.DrukregelMovementCheckBox.Text = "DR movement:";
             this.DrukregelMovementCheckBox.UseVisualStyleBackColor = true;
             // 
             // DrukregelMovementTextBox
@@ -384,13 +289,42 @@ namespace KneeWall
             this.structuresExtender.SetAttributeName(this.DrukregelMovementTextBox, "DrukregelMovement");
             this.structuresExtender.SetAttributeTypeName(this.DrukregelMovementTextBox, "Distance");
             this.structuresExtender.SetBindPropertyName(this.DrukregelMovementTextBox, null);
-            this.DrukregelMovementTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DrukregelMovementTextBox.Location = new System.Drawing.Point(151, 183);
+            this.DrukregelMovementTextBox.Location = new System.Drawing.Point(413, 208);
             this.DrukregelMovementTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DrukregelMovementTextBox.Name = "DrukregelMovementTextBox";
-            this.DrukregelMovementTextBox.Size = new System.Drawing.Size(528, 22);
-            this.DrukregelMovementTextBox.TabIndex = 5;
+            this.DrukregelMovementTextBox.Size = new System.Drawing.Size(48, 22);
+            this.DrukregelMovementTextBox.TabIndex = 3;
             this.DrukregelMovementTextBox.Text = "0.0";
+            // 
+            // SheatingTypeCheckBox
+            // 
+            this.structuresExtender.SetAttributeName(this.SheatingTypeCheckBox, "SheatingType");
+            this.structuresExtender.SetAttributeTypeName(this.SheatingTypeCheckBox, null);
+            this.SheatingTypeCheckBox.AutoSize = true;
+            this.structuresExtender.SetBindPropertyName(this.SheatingTypeCheckBox, null);
+            this.structuresExtender.SetIsFilter(this.SheatingTypeCheckBox, true);
+            this.SheatingTypeCheckBox.Location = new System.Drawing.Point(78, 265);
+            this.SheatingTypeCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.SheatingTypeCheckBox.Name = "SheatingTypeCheckBox";
+            this.SheatingTypeCheckBox.Size = new System.Drawing.Size(18, 17);
+            this.SheatingTypeCheckBox.TabIndex = 8;
+            this.SheatingTypeCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SheatingTypeComboBox
+            // 
+            this.structuresExtender.SetAttributeName(this.SheatingTypeComboBox, "SheatingType");
+            this.structuresExtender.SetAttributeTypeName(this.SheatingTypeComboBox, "Integer");
+            this.structuresExtender.SetBindPropertyName(this.SheatingTypeComboBox, "SelectedIndex");
+            this.SheatingTypeComboBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SheatingTypeComboBox.Items.AddRange(new object[] {
+            "Naturel",
+            "Wit Spanolak"});
+            this.SheatingTypeComboBox.Location = new System.Drawing.Point(103, 261);
+            this.SheatingTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SheatingTypeComboBox.Name = "SheatingTypeComboBox";
+            this.SheatingTypeComboBox.Size = new System.Drawing.Size(120, 24);
+            this.SheatingTypeComboBox.TabIndex = 4;
+            this.SheatingTypeComboBox.Text = "Naturel";
             // 
             // okApplyModifyGetOnOffCancel1
             // 
@@ -403,7 +337,7 @@ namespace KneeWall
             this.okApplyModifyGetOnOffCancel1.Margin = new System.Windows.Forms.Padding(5);
             this.okApplyModifyGetOnOffCancel1.Name = "okApplyModifyGetOnOffCancel1";
             this.okApplyModifyGetOnOffCancel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.okApplyModifyGetOnOffCancel1.Size = new System.Drawing.Size(697, 33);
+            this.okApplyModifyGetOnOffCancel1.Size = new System.Drawing.Size(687, 33);
             this.okApplyModifyGetOnOffCancel1.TabIndex = 3;
             this.okApplyModifyGetOnOffCancel1.OkClicked += new System.EventHandler(this.okApplyModifyGetOnOffCancel1_OkClicked);
             this.okApplyModifyGetOnOffCancel1.ApplyClicked += new System.EventHandler(this.okApplyModifyGetOnOffCancel1_ApplyClicked);
@@ -412,18 +346,52 @@ namespace KneeWall
             this.okApplyModifyGetOnOffCancel1.OnOffClicked += new System.EventHandler(this.okApplyModifyGetOnOffCancel1_OnOffClicked);
             this.okApplyModifyGetOnOffCancel1.CancelClicked += new System.EventHandler(this.okApplyModifyGetOnOffCancel1_CancelClicked);
             // 
+            // LengthCheckBox
+            // 
+            this.structuresExtender.SetAttributeName(this.LengthCheckBox, "Length");
+            this.structuresExtender.SetAttributeTypeName(this.LengthCheckBox, null);
+            this.LengthCheckBox.AutoSize = true;
+            this.structuresExtender.SetBindPropertyName(this.LengthCheckBox, null);
+            this.structuresExtender.SetIsFilter(this.LengthCheckBox, true);
+            this.LengthCheckBox.Location = new System.Drawing.Point(387, 91);
+            this.LengthCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.LengthCheckBox.Name = "LengthCheckBox";
+            this.LengthCheckBox.Size = new System.Drawing.Size(137, 21);
+            this.LengthCheckBox.TabIndex = 0;
+            this.LengthCheckBox.Text = "Knee wall length:";
+            this.LengthCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // LengthTextBox
+            // 
+            this.structuresExtender.SetAttributeName(this.LengthTextBox, "Length");
+            this.structuresExtender.SetAttributeTypeName(this.LengthTextBox, "Distance");
+            this.structuresExtender.SetBindPropertyName(this.LengthTextBox, null);
+            this.LengthTextBox.Location = new System.Drawing.Point(532, 89);
+            this.LengthTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.LengthTextBox.Name = "LengthTextBox";
+            this.LengthTextBox.Size = new System.Drawing.Size(96, 22);
+            this.LengthTextBox.TabIndex = 1;
+            this.LengthTextBox.Text = "2440";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.structuresExtender.SetAttributeName(this.tableLayoutPanel3, null);
+            this.structuresExtender.SetAttributeTypeName(this.tableLayoutPanel3, null);
+            this.structuresExtender.SetBindPropertyName(this.tableLayoutPanel3, null);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
             // groupBox1
             // 
             this.structuresExtender.SetAttributeName(this.groupBox1, null);
             this.structuresExtender.SetAttributeTypeName(this.groupBox1, null);
             this.structuresExtender.SetBindPropertyName(this.groupBox1, null);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(330, 34);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(3, 105);
-            this.groupBox1.TabIndex = 11;
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // tableLayoutPanel2
@@ -431,23 +399,8 @@ namespace KneeWall
             this.structuresExtender.SetAttributeName(this.tableLayoutPanel2, null);
             this.structuresExtender.SetAttributeTypeName(this.tableLayoutPanel2, null);
             this.structuresExtender.SetBindPropertyName(this.tableLayoutPanel2, null);
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.saveLoad2, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -457,16 +410,15 @@ namespace KneeWall
             this.structuresExtender.SetAttributeTypeName(this.saveLoad2, null);
             this.saveLoad2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.structuresExtender.SetBindPropertyName(this.saveLoad2, null);
-            this.tableLayoutPanel2.SetColumnSpan(this.saveLoad2, 4);
             this.saveLoad2.Dock = System.Windows.Forms.DockStyle.Top;
             this.saveLoad2.HelpFileType = Tekla.Structures.Dialog.UIControls.SaveLoad.HelpFileTypeEnum.General;
             this.saveLoad2.HelpKeyword = "";
             this.saveLoad2.HelpUrl = "";
-            this.saveLoad2.Location = new System.Drawing.Point(4, 4);
+            this.saveLoad2.Location = new System.Drawing.Point(0, 0);
             this.saveLoad2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveLoad2.Name = "saveLoad2";
             this.saveLoad2.SaveAsText = "";
-            this.saveLoad2.Size = new System.Drawing.Size(192, 12);
+            this.saveLoad2.Size = new System.Drawing.Size(797, 53);
             this.saveLoad2.TabIndex = 0;
             this.saveLoad2.UserDefinedHelpFilePath = null;
             // 
@@ -475,39 +427,31 @@ namespace KneeWall
             this.structuresExtender.SetAttributeName(this.tabControl2, null);
             this.structuresExtender.SetAttributeTypeName(this.tabControl2, null);
             this.structuresExtender.SetBindPropertyName(this.tabControl2, null);
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(3, -6);
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(90, 1);
-            this.tabControl2.TabIndex = 2;
+            this.tabControl2.Size = new System.Drawing.Size(200, 100);
+            this.tabControl2.TabIndex = 0;
             // 
             // tabPage3
             // 
             this.structuresExtender.SetAttributeName(this.tabPage3, null);
             this.structuresExtender.SetAttributeTypeName(this.tabPage3, null);
             this.structuresExtender.SetBindPropertyName(this.tabPage3, null);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(0, 0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(82, 0);
+            this.tabPage3.Size = new System.Drawing.Size(200, 100);
             this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
             this.structuresExtender.SetAttributeName(this.tabPage4, null);
             this.structuresExtender.SetAttributeTypeName(this.tabPage4, null);
             this.structuresExtender.SetBindPropertyName(this.tabPage4, null);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(0, 0);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(82, 0);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Size = new System.Drawing.Size(200, 100);
+            this.tabPage4.TabIndex = 0;
             // 
             // KneeWallForm
             // 
@@ -515,8 +459,9 @@ namespace KneeWall
             this.structuresExtender.SetAttributeTypeName(this, null);
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.structuresExtender.SetBindPropertyName(this, null);
-            this.ClientSize = new System.Drawing.Size(707, 505);
+            this.ClientSize = new System.Drawing.Size(697, 505);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KneeWallForm";
@@ -524,10 +469,7 @@ namespace KneeWall
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.PropertiesTabPage1.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
+            this.PropertiesTabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
